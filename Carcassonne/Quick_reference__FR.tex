@@ -1,0 +1,282 @@
+%              %
+%%            %%
+%%% PREAMBLE %%%
+%%            %%
+%              %
+
+
+% Document class
+\documentclass[11pt]{beamer}
+
+\usetheme{Boadilla}
+\usecolortheme{beaver}
+\useinnertheme{rectangles}
+
+\setbeamertemplate{navigation symbols}{}
+
+% Font
+\usepackage{fontspec}
+\setmainfont[%
+	SmallCapsFont={* Caps},%	enable small capital font family
+	SlantedFont={* Slanted},%	enable slanted font family
+]{Latin Modern Roman}
+
+% Language and typography
+\usepackage{polyglossia}
+\setdefaultlanguage{french}
+
+\usepackage[autostyle=true]{csquotes}
+
+\usepackage{microtype}
+
+% Defining 'theorem' environments
+%\setbeamertemplate{theorems}[numbered]
+\setbeamertemplate{theorem begin}
+{%
+	\normalfont
+	\begin{\inserttheoremblockenv}
+		{%
+			\inserttheoremname
+			\inserttheoremnumber
+			\ifx\inserttheoremaddition\@empty\else\ : \inserttheoremaddition\fi%
+		}%
+}%
+\setbeamertemplate{theorem end}{\end{\inserttheoremblockenv}}
+
+\newtheorem{variant}{Variante}
+
+
+
+%              %
+%%            %%
+%%% DOCUMENT %%%
+%%            %%
+%              %
+
+% Information
+\title{Carcassonne: résumé des règles}
+\author[A. Quenon]{Alexandre Quenon}
+\date{\today}
+
+% Text
+\begin{document}
+% *** Title page *** %
+\frame{\titlepage}
+
+
+% *** Overview *** %
+\begin{frame}
+	\tableofcontents
+\end{frame}
+
+\AtBeginSection{%
+	\begin{frame}
+		\tableofcontents[currentsection]
+	\end{frame}
+}
+
+
+% *** Introduction *** %
+\section{Introduction}
+
+	\subsection{Le jeu de base}
+
+\begin{frame}
+	\frametitle{Carcassonne: en bref}
+	
+	Thèmes généraux:
+	\begin{itemize}
+		\item Moyen-Âge,
+		\item développement/gestion d'un territoire.
+	\end{itemize}
+
+	\vspace*{1ex}
+	
+	Mécanismes:
+	\begin{itemize}
+		\item placement de tuiles,
+		\item contrôle de territoires par majorité,
+		\item gestion de ressources (meeple).
+	\end{itemize}
+\end{frame}
+
+
+	\subsection{Les extensions}
+
+\begin{frame}
+	\frametitle{Extensions: en bref}
+	
+	Mini-extension: \alert{La Rivière}.
+	
+	Une rivière façonne le paysage en début de partie.
+	
+	Caractéristiques:
+	\begin{itemize}
+		\item variante sur le terrain,
+		\item après quelques parties.
+	\end{itemize}
+
+
+	\vspace*{1ex}
+	
+	
+	Mini-extension: \alert{L'Abbé}.
+	
+	Nouvelle zone: jardin (équivalent abbaye).
+	Meeple spécifique: abbé.
+	
+	Caractéristiques:
+	\begin{itemize}
+		\item offre davantage de stratégies,
+		\item pour joueurs expérimentés.
+	\end{itemize}
+\end{frame}
+
+
+% *** Rules *** %
+\section{Règles}
+
+	\subsection{Règles de base}
+
+\begin{frame}
+	\frametitle{Début de partie}
+	
+	Préparation:
+	\begin{enumerate}
+		\item placer la tuile de départ sur le terrain;
+		\item choisir une couleur et prendre les huit meeples associés;
+		\item mélanger les tuiles et les disposer en plusieurs piles, faces cachées;
+		\item placer le plateau de score avec un meeple de chaque joueur debout sur la case \enquote{0}.
+	\end{enumerate}
+
+	Remarque: si un jour fait le tour du plateau de score ($>50$), son meeple sera couché pour l'indiquer.
+\end{frame}
+
+\begin{frame}
+	\frametitle{Tour d'action}
+	
+	Règles du tour d'action:
+	\begin{itemize}
+		\item un joueur à la fois (tour par tour);
+		\item réaliser un tour d'action complet, puis passer au joueur suivant (sens horlogique).
+	\end{itemize}
+
+	\vspace*{1ex}
+	
+	Déroulement d'un tour:
+	\begin{enumerate}
+		\item piocher une tuile au hasard (cf. variantes~\ref{var:choose_tile_common} et \ref{var:choose_tile_own});
+		\item poser la tuile $\rightarrow$ les zones doivent concorder;
+		\item{}[optionnel] poser un meeple (voleur, chevalier, moine, paysan) dans une zone non contrôlée par un autre meeple (quel que soit le joueur à qui il appartient, y compris soi-même);
+		\item évaluer les zones complétées $\rightarrow$ voir \hyperlink{frame:score}{\beamerbutton{Marquer des points}};
+		\item récupérer les meeples des zones complétées (retour au propriétaire d'origine).
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Fin de partie}
+	
+	Condition: fin du tour du joueur piochant la dernière tuile.
+	
+	\vspace*{1ex}
+	
+	Déroulement:
+	\begin{enumerate}
+		\item finir le tour d'action normalement;
+		\item décompter les points dûs aux meeples restant;
+		\item évaluer le score final.
+	\end{enumerate}
+
+	\vspace*{1ex}
+	
+	Victoire: score le plus élevé.
+\end{frame}
+
+\begin{frame}
+	\frametitle{Marquer des points}
+	\label{frame:score}
+	
+	Règles générales:
+	\begin{itemize}
+		\item les points varient s'ils sont attribués en cours ou en fin de partie;
+		\item les points sont obtenus par le joueur en majorité sur la zone;
+		\item en cas d'égalité, tous les joueurs obtiennent la totalité des points (cf. variante~\ref{var:divide_pts_draw}).
+	\end{itemize}
+
+	\vspace*{1ex}
+	
+	Points par types de meeples/zones:
+	\begin{itemize}
+		\item voleur $\rightarrow$ route = 1 point par tuile;
+		\item chevalier $\rightarrow$ ville =
+		\begin{itemize}
+			\item en cours de jeu, 2 points par tuile + 2 points par blason,
+			\item en fin de partie, 1 point par tuile + 1 point par blason ($\times\frac{1}{2}$);
+		\end{itemize}
+		\item moine $\rightarrow$ abbaye = 1 point + 1 point par tuile adjacente;
+		\item paysan $\rightarrow$ pré = en fin de partie, 3 points pour chaque ville complète adjacente.
+	\end{itemize}
+\end{frame}
+
+
+	\subsection{Variantes}
+
+\begin{frame}
+	\frametitle{Variantes pour diminuer le hasard}
+	
+	Expérience de jeu: piocher une tuile au hasard peut être exaspérant voire amener un blocage.
+	Pour diminuer l'impact du hasard, la variante~\ref{var:choose_tile_common} ou \ref{var:choose_tile_own} peut être utilisée \cite{JeuxNim_Carcassonne}.
+	
+	\begin{variant}[Choisir une tuile parmi $N$ (pot commun)\label{var:choose_tile_common}]
+		$N$ tuiles sont dévoilée en permanence.
+		Le joueur dont s'est le tour en choisit une et en dévoile immédiatement une autre. Puis, il joue normalement.
+		
+		Suggestions: $N=3$ (Quenon), $N=2$ \cite{JeuxNim_Carcassonne}.
+	\end{variant}
+
+	\begin{variant}[Choisir une tuile parmi $N$ (\enquote{main} personnelle)\label{var:choose_tile_own}]
+		Au début de la partie, chaque joueur pioche $N$ tuiles.
+		Le joueur dont c'est le tour en choisit une et en pioche immédiatement une autre. Puis, il joue normalement.
+		
+		Suggestion: $N=3$ \cite{JeuxNim_Carcassonne}.
+	\end{variant}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Variantes pour pimenter le jeu}
+	
+	Expérience de jeu: création de paysages non réalistes comportant des \enquote{trous} (zones vides).
+	Pour augmenter le réalisme, la variante~\ref{var:no_hole} peut être mise en place \cite{JeuxNim_Carcassonne}.
+	
+	\begin{variant}[Interdiction de créer des trous dans le paysage\label{var:no_hole}]
+		Lors de la construction, aucune zone non construite ne peut être entourée de tuiles.
+		
+		Suggestion: après quelques parties.
+	\end{variant}
+
+	Expérience de jeu: manque de pugnacité en cas d'égalité de meeples, surtout si $>2$ joueurs.
+	Pour augmenter les enjeux, la variante~\ref{var:divide_pts_draw} peut être utilisée (proposition de Laurent Vanstraelen).
+	
+	\begin{variant}[Division des points en cas d'égalité\label{var:divide_pts_draw}]
+		Si $N$ joueurs contrôlent une même zone à égalité, chacun reçoit le nombre total de points divisé par $N$, arrondi à l'entier inférieur (toujours $\geq 1$).
+		
+		Suggestion: pour joueurs expérimentés.
+	\end{variant}
+\end{frame}
+
+
+% *** References *** %
+\section{Références}
+
+\begin{frame}
+	\frametitle{Références}
+	
+	\begin{thebibliography}{Biblio}
+		\bibitem[Maréchal]{JeuxNim_Carcassonne}
+		N.~Maréchal.
+		\newblock Carcassonne.
+		\newblock Jeux de Nim, \url{https://www.jeuxdenim.be/jeu-Carcassonne}
+	\end{thebibliography}
+\end{frame}
+%
+\end{document}
