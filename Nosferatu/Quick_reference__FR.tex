@@ -1,0 +1,274 @@
+%              %
+%%            %%
+%%% PREAMBLE %%%
+%%            %%
+%              %
+
+
+% Document class
+\documentclass[11pt]{beamer}
+
+\usetheme{Boadilla}
+\usecolortheme{beaver}
+\useinnertheme{rectangles}
+
+\setbeamertemplate{navigation symbols}{}
+
+% Font
+\usepackage{fontspec}
+\setmainfont[%
+	SmallCapsFont={* Caps},%	enable small capital font family
+	SlantedFont={* Slanted},%	enable slanted font family
+]{Latin Modern Roman}
+
+% Language and typography
+\usepackage{polyglossia}
+\setdefaultlanguage{french}
+
+\usepackage[autostyle=true]{csquotes}
+
+\usepackage{microtype}
+
+\usepackage{fmtcount}
+
+% Defining 'theorem' environments
+%\setbeamertemplate{theorems}[numbered]
+\setbeamertemplate{theorem begin}
+{%
+	\normalfont
+	\begin{\inserttheoremblockenv}
+		{%
+			\inserttheoremname
+			\inserttheoremnumber
+			\ifx\inserttheoremaddition\@empty\else\ : \inserttheoremaddition\fi%
+		}%
+}%
+\setbeamertemplate{theorem end}{\end{\inserttheoremblockenv}}
+
+\newtheorem{variant}{Variante}
+
+
+
+%              %
+%%            %%
+%%% DOCUMENT %%%
+%%            %%
+%              %
+
+% Information
+\title{Nosferatu: résumé des règles}
+\author[A. Quenon]{Alexandre Quenon}
+\date{\today}
+
+% Text
+\begin{document}
+% *** Title page *** %
+\frame{\titlepage}
+
+
+% *** Overview *** %
+\begin{frame}
+	\tableofcontents
+\end{frame}
+
+\AtBeginSection{%
+	\begin{frame}
+		\tableofcontents[currentsection]
+	\end{frame}
+}
+
+
+% *** Introduction *** %
+\section{Introduction}
+
+	\subsection{Le jeu de base}
+
+\begin{frame}
+	\frametitle{Nosferatu: en bref}
+	
+	Thèmes généraux:
+	\begin{itemize}
+		\item Vampires,
+		\item jeu d'ambiance.
+	\end{itemize}
+
+	\vspace*{1ex}
+	
+	Mécanismes:
+	\begin{itemize}
+		\item rôles cachés,
+		\item bluff.
+	\end{itemize}
+\end{frame}
+
+
+%	\subsection{Les extensions}
+
+
+% *** Rules *** %
+\section{Règles}
+
+	\subsection{Règles de base (5 à 8 joueurs)}
+
+\begin{frame}
+	\frametitle{Début de partie}
+	\label{frame:start}
+	
+	Préparation ($n$ joueurs):
+	\begin{enumerate}
+		\item prendre les tuiles correspondant aux rôles (1 Vampire, 1 Renfield et $n-2$ Chasseurs);
+		\item choisir un joueur ayant le rôle de Renfield (Maître de Jeu) $\rightarrow$ placer la tuile devant lui face visible;
+		\item Renfield $\rightarrow$ attribuer les rôles aux autres joueurs en distribuant les tuiles restantes faces cachées;
+		\item constituer la pile \enquote{Horloge} en prenant 1 carte Aurore et $n$ cartes Nuit;
+		\item constituer la pile \enquote{Évènements} en mélangeant toutes les cartes restantes;
+		\item disposer les 5 tuiles Rituels au centre;
+		\item chaque joueur excepté Renfield $\rightarrow$ piocher 2 cartes;
+		\item Renfield $\rightarrow$ désigner le premier joueur en posant le Pieu devant lui.
+	\end{enumerate}
+\end{frame}
+
+%\begin{frame}
+%	\frametitle{Tour d'action}
+%	
+%	Règles du tour d'action:
+%	\begin{itemize}
+%		\item un joueur à la fois (tour par tour);
+%		\item réaliser un tour d'action complet, puis passer au joueur suivant (sens horlogique).
+%	\end{itemize}
+%
+%	\vspace*{1ex}
+%	
+%	Déroulement d'un tour:
+%	\begin{enumerate}
+%		\item piocher une tuile au hasard (cf. variantes~\ref{var:choose_tile_common} et \ref{var:choose_tile_own});
+%		\item poser la tuile $\rightarrow$ les zones doivent concorder;
+%		\item{}[optionnel] poser un meeple (voleur, chevalier, moine, paysan) dans une zone non contrôlée par un autre meeple (quel que soit le joueur à qui il appartient, y compris soi-même);
+%		\item évaluer les zones complétées $\rightarrow$ voir \hyperlink{frame:score}{\beamerbutton{Marquer des points}};
+%		\item récupérer les meeples des zones complétées (retour au propriétaire d'origine).
+%	\end{enumerate}
+%\end{frame}
+
+\begin{frame}
+	\label{frame:end}
+	\frametitle{Fin de partie}
+	
+	
+	Conditions de fin:
+	\begin{enumerate}
+		\item un joueur tue un autre joueur avec le Pieu,
+		\item les 5 Rituels sont accomplis,
+		\item 5 Morsures sont distribuées.
+	\end{enumerate}
+	
+	\vspace*{1ex}
+	
+	Victoire immédiate des Chasseurs:
+	\begin{enumerate}
+		\item le Vampire est tué;
+		\item le \ordinalnum{5} Rituel est achevé.
+	\end{enumerate}
+
+	Victoire immédiate du Vampire et de Renfield:
+	\begin{enumerate}
+		\item un Chasseur est tué;
+		\item la \ordinalnum{5}[f] Morsure est distribuée.
+	\end{enumerate}
+\end{frame}
+
+%\begin{frame}
+%	\frametitle{Marquer des points}
+%	\label{frame:score}
+%	
+%	Règles générales:
+%	\begin{itemize}
+%		\item les points varient s'ils sont attribués en cours ou en fin de partie;
+%		\item les points sont obtenus par le joueur en majorité sur la zone;
+%		\item en cas d'égalité, tous les joueurs obtiennent la totalité des points (cf. variante~\ref{var:divide_pts_draw}).
+%	\end{itemize}
+%
+%	\vspace*{1ex}
+%	
+%	Points par types de meeples/zones:
+%	\begin{itemize}
+%		\item voleur $\rightarrow$ route = 1 point par tuile;
+%		\item chevalier $\rightarrow$ ville =
+%		\begin{itemize}
+%			\item en cours de jeu, 2 points par tuile + 2 points par blason,
+%			\item en fin de partie, 1 point par tuile + 1 point par blason ($\times\frac{1}{2}$);
+%		\end{itemize}
+%		\item moine $\rightarrow$ abbaye = 1 point + 1 point par tuile adjacente;
+%		\item paysan $\rightarrow$ pré = en fin de partie, 3 points pour chaque ville complète adjacente.
+%	\end{itemize}
+%\end{frame}
+
+
+	\subsection{Variantes (nombre de joueurs)}
+
+\begin{frame}
+	\frametitle{De 9 à 10 joueurs}
+	
+	Préparation ($n$ joueurs):
+	\begin{enumerate}
+		\item prendre les tuiles correspondant aux rôles (2 Vampires, 1 Renfield et $n-3$ Chasseurs);
+		\item la suite est identique aux \hyperlink{frame:start}{\beamerbutton{règles de base}}.
+	\end{enumerate}
+
+	\vspace*{1ex}
+
+	Conditions de fin:
+	\begin{enumerate}
+		\item un joueur tue trois autres joueurs avec le Pieu,
+		\item les 5 Rituels sont accomplis,
+		\item 8 Morsures sont distribuées,
+	\end{enumerate}
+
+	Victoire immédiate des Chasseurs:
+	\begin{enumerate}
+		\item les deux Vampires sont tués;
+		\item le \ordinalnum{5} Rituel est achevé.
+	\end{enumerate}
+	
+	Victoire immédiate des Vampires et de Renfield:
+	\begin{enumerate}
+		\item deux Chasseurs ou plus sont tués;
+		\item la \ordinalnum{8}[f] Morsure est distribuée.
+	\end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{À 4 joueurs}
+	
+	Préparation:
+	\begin{enumerate}
+		\item prendre les tuiles correspondant aux rôles (1 Vampire et 3 Chasseurs);
+		\item distribuer les rôles au hasard à tous les joueurs (tuiles faces cachées);
+		\item constituer la pile \enquote{Horloge} en prenant 1 carte Aurore et 5 cartes Nuit;
+		\item constituer la pile \enquote{Évènements} en mélangeant toutes les cartes restantes;
+		\item disposer les 5 tuiles Rituels au centre;
+		\item chaque joueur $\rightarrow$ piocher 2 cartes;
+		\item désigner le premier joueur en posant le Pieu devant lui (e.g., joueur qui s'est levé le plus tôt).
+	\end{enumerate}
+
+	\vspace*{1ex}
+
+	\hyperlink{frame:end}{\beamerbutton{Conditions de fin et de victoire}} inchangées.
+\end{frame}
+
+
+
+% *** References *** %
+\section{Références}
+
+%\begin{frame}
+%	\frametitle{Références}
+%	
+%	\begin{thebibliography}{Biblio}
+%		\bibitem[Maréchal]{JeuxNim_Carcassonne}
+%		N.~Maréchal.
+%		\newblock Carcassonne.
+%		\newblock Jeux de Nim, \url{https://www.jeuxdenim.be/jeu-Carcassonne}
+%	\end{thebibliography}
+%\end{frame}
+%
+\end{document}
