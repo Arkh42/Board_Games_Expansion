@@ -1,22 +1,18 @@
 # Carcassonne
 
-[Engllish version below]
 
-## En bref
+## En bref / Overview
 
-Jeu édité par Filosofia.
+Éditeur / Publisher = Filosofia.
 
-| Caractéristique	| Nombres	|
-| :--------------	| :-----:	|
-| Joueurs			| 2-5		|
-| Durée				| 35 min.	|
+| Caractéristiques	| Characteristics	| Valeurs / Values	|
+| :---------------	| :--------------	| :--------------:	|
+| Joueurs			| Players			| 2-5				|
+| Durée				| Duration			| 35 min.			|
 
 
-## Overview
-
-Game published by Filosofia.
-
-| Characteristics	| Figures	|
-| :--------------	| :-----:	|
-| Players			| 2-5		|
-| Duration			| 35 min.	|
+| Mécanismes				| Mecanisms				|
+| :---------				| :--------				|
+| Placement de tuiles		| Tiles placement		|
+| Contrôle de territoires	| Territory control		|
+| Gestion de ressources		| Resources management	|
