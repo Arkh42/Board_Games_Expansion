@@ -1,15 +1,32 @@
-# Board_Games_Expansion
+Board_Games_Expansion
+=====================
 
 
-## [EN] Aim of the current repository
+Aim of the current repository / But du présent "repository"
+-----------------------------------------------------------
+
+
+### [EN]
 
 The main goal of this repository consists in helping board games to conquer the world.
 Indeed, they are sometimes seen as difficult to play, especially when gamers do not speak the same language.
 To overcome this, brief overview, explanations and variant rules will be provided in both English and French.
 
 
-## [FR] But du présent "repository"
+### [FR] 
 
 L'objectif principal de ce "repository" GitHub est de faire en sorte que les jeux de société puissent conquérir le monde.
 En effet, ils sont parfois perçus comme complexes, en particulier lorsque les joueurs ne parlent pas la même langue.
 Pour remédier à cela, un bref aperçu, des explications et des règles variantes seront proposées en français et en anglais.
+
+
+List of board games / Liste de jeux
+-----------------------------------
+
+
+|	Name / Nom	|	Type [FR]					|	Thème [FR]	|
+|	:---------	|	:--------					|	:---------	|
+|	Carcassonne	|	Stratégie, placement tuiles	|	Moyen-Âge	|
+|	Cash'n Guns	|	Ambiance, bluff				|	Gangsters	|
+|	Nosferatu	|	Ambiance, rôle caché		|	Vampires	|
+|	Rising 5	|	Scénario, coopération		|	Fantasy		|
