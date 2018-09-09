@@ -1,0 +1,233 @@
+%              %
+%%            %%
+%%% PREAMBLE %%%
+%%            %%
+%              %
+
+
+% Document class
+\documentclass[11pt]{beamer}
+
+\usetheme{Boadilla}
+\usecolortheme{beaver}
+\useinnertheme{rectangles}
+
+\setbeamertemplate{navigation symbols}{}
+
+% Font
+\usepackage{fontspec}
+\setmainfont[%
+	SmallCapsFont={* Caps},%	enable small capital font family
+	SlantedFont={* Slanted},%	enable slanted font family
+]{Latin Modern Roman}
+
+% Language and typography
+\usepackage{polyglossia}
+\setdefaultlanguage{french}
+
+\usepackage[autostyle=true]{csquotes}
+
+\usepackage{fmtcount}
+
+\usepackage{microtype}
+
+% Defining 'theorem' environments
+%\setbeamertemplate{theorems}[numbered]
+\setbeamertemplate{theorem begin}
+{%
+	\normalfont
+	\begin{\inserttheoremblockenv}
+		{%
+			\inserttheoremname
+			\inserttheoremnumber
+			\ifx\inserttheoremaddition\@empty\else\ : \inserttheoremaddition\fi%
+		}%
+}%
+\setbeamertemplate{theorem end}{\end{\inserttheoremblockenv}}
+
+% References
+\usepackage{cleveref}
+
+\newtheorem{variant}{Variante}
+
+
+
+%              %
+%%            %%
+%%% DOCUMENT %%%
+%%            %%
+%              %
+
+% Information
+\newcommand{\thegame}{Cash'n Guns}
+
+\title[\thegame{} : fiches]{\thegame{}: fiches \enquote{flash cards}}
+\author[A. Quenon]{Alexandre Quenon}
+\date{\today}
+
+% Text
+\begin{document}
+% *** Title page *** %
+\frame{\titlepage}
+
+
+% *** Overview *** %
+\begin{frame}
+	\tableofcontents
+\end{frame}
+
+
+
+% *** Présentation *** %
+\section{Présentation}
+
+
+\subsection{Le jeu de base}
+
+	\begin{frame}
+		\frametitle{\thegame{}: en bref}
+		
+		\structure{Thèmes généraux}:
+		\begin{itemize}
+			\item gangsters,
+			\item jeu d'ambiance.
+		\end{itemize}
+	
+		\vspace*{1ex}
+		
+		\structure{Mécanismes}:
+		\begin{itemize}
+			\item bluff,
+			\item prise de risque,
+			\item gestion de ressources (cartes \emph{Balle} et \emph{Butin}).
+		\end{itemize}
+	\end{frame}
+
+
+\subsection{Les extensions}
+
+	\begin{frame}
+		\frametitle{More Cash'n More Guns: en bref}
+		
+		\texttt{Pas encore d'information.}
+	\end{frame}
+
+
+
+% *** Rules *** %
+\section{Règles}
+
+
+\subsection{Règles de base}
+
+	\begin{frame}
+		\frametitle{Début de partie}
+		
+		\structure{Mise en place}:
+		\begin{enumerate}
+			\item chaque joueur prend
+				\begin{itemize}
+					\item 1 pistolet,
+					\item 5 cartes \emph{Clic},
+					\item 3 cartes \emph{Bang !},
+				\end{itemize}
+			\item mélanger les cartes \emph{Butin} et les séparer en 8 piles de 8 cartes;
+			\item placer la tuile \emph{Nouveau Parrain} au centre de la table;
+			\item placer les jetons \emph{Blessure} à portée;
+			\item désigner le premier joueur et lui donner le \emph{bureau du Parrain}.
+		\end{enumerate}
+	
+		\vspace*{1ex}
+	
+		\structure{Astuces}:
+		\begin{itemize}
+			\item empiler les 8 piles de 8 cartes \emph{Butin} orthogonalement;
+			\item proposition de premier joueur par les règles $\rightarrow$ joueur le plus âgé.
+		\end{itemize}
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{Tour de jeu}
+		
+		\structure{Déroulement d'un tour}:
+		\begin{enumerate}
+			\item étaler face visible 8 cartes \emph{Butin} et la tuile \emph{Nouveau Parrain} face bureau;
+			\item simultanément, chaque joueur choisit une carte \emph{Balle} (soit une carte \emph{Clic}, soit une carte \emph{Bang!}) et la place face cachée devant lui;
+			\item simultanément, au compte de 3, chaque joueur en braque un autre avec le pistolet;
+			\item le Parrain actuel peut utiliser son privilège pour forcer un joueur à changer librement de cible;
+			\item simultanément, au compte de 3, chaque joueur choisit 1) de se coucher, ou 2) de rester debout et de crier \enquote{Banzaï!};
+			\item simultanement, appliquer les cartes des joueurs non couchés;
+			\item en partant du Parrain, dans le sens horlogique, chaque joueur encore debout choisit une carte du butin, jusqu'à épuisement du butin.
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{Tour de jeu}
+		
+		\structure{Actions des joueurs}:
+		\begin{itemize}
+			\item un joueur qui se couche
+				\begin{itemize}
+					\item défausse sa carte \emph{Balle} face cachée,
+					\item ne participe pas au partage du butin,
+					\item ne peut pas se faire tirer dessus,
+				\end{itemize}
+			\item un joueur ciblant un joueur couché défausse sa carte \emph{Balle} face cachée;
+			\item un joueur ciblé par 1 ou $n$ \emph{Bang !} subit 1 ou $n$ Blessures, prend autant de jetons \emph{Blessure} et doit coucher son Personnage;
+			\item un joueur totalisant 3 jetons \emph{Blessure} ou plus est éliminé de la partie.
+		\end{itemize}
+	
+		\structure{Remarques}:
+		\begin{itemize}
+			\item le Parrain actuel applique les différentes phases du tour (aide-mémoire au dos de la carte \emph{bureau du Parrain});
+			\item si un joueur a été trop lent durant la phase de braquage, on considère qu'il ne braque personne durant le tour.
+		\end{itemize}
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{Fin de partie}
+		
+		\structure{Conditions}:
+		\begin{itemize}
+			\item il ne reste qu'un seul joueur en vie;
+			\item le \ordinalnum{8} tour de jeu se termine.
+		\end{itemize}
+		
+		Rappel: un joueur totalisant 3 jetons \emph{Blessure} ou plus est immédiatement éliminé.
+		
+		\vspace*{1ex}
+		
+		\structure{Décompte} du cash pour les joueurs encore en vie:
+		\begin{enumerate}
+			\item chaque joueur compte le nombre de cartes \emph{Diamant} qu'il possède 
+				\begin{itemize}
+					\item celui qui en a le plus gagne le bonus de 60000 \$,
+					\item en cas d'égalité personne ne remporte le bonus,
+				\end{itemize}
+			\item chaque joueur compte la valeur de butin
+			\begin{itemize}
+				\item le joueur le plus riche gagne la partie,
+				\item en cas d'égalité le joueur ayant le plus de Blessures gagne la partie,
+				\item en cas d'égalité les joueurs partagent la victoire.
+			\end{itemize}
+		\end{enumerate}
+	\end{frame}
+
+
+\subsection{Variantes}
+
+	\begin{frame}
+		\frametitle{Variantes pour pimenter le jeu}
+		
+		\begin{variant}[Utiliser les cartes \emph{Pouvoir} \label{var--power}]
+			En début de partie, distribuer une carte \emph{Pouvoir} à chaque joueur.
+			Les Pouvoirs sont permanents.
+		\end{variant}
+	
+		Remarque: je n'ai pas encore testé la \cref{var--power}.
+		
+		Risque potentiel: déséquilibre dans le jeu.
+	\end{frame}
+
+%
+\end{document}
