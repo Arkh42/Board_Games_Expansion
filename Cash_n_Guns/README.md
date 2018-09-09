@@ -5,7 +5,10 @@ Cash'n Guns
 En bref / Overview
 ------------------
 
+Type de jeu : jeu d'ambiance.
+
 Éditeur / Publisher = Repos Production.
+
 
 | Caractéristiques	| Characteristics	| Valeurs / Values	|
 | :---------------	| :--------------	| :--------------:	|
@@ -13,8 +16,8 @@ En bref / Overview
 | Durée				| Duration			| 30 min.			|
 
 
-| Mécanismes				| Mecanisms				|
-| :---------				| :--------				|
-| ...		| ...		|
-| ...	| ...		|
-| ...		| ...	|
+| Mécanismes						| Mecanisms						|
+| :---------						| :--------						|
+| Bluff								| Bluff	 						|
+| Prise de risques					| Risk assessment				|
+| Gestion de resssources (limité)	| Resource management (limited)	|
