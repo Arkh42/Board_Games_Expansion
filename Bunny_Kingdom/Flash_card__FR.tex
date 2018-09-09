@@ -1,0 +1,236 @@
+%              %
+%%            %%
+%%% PREAMBLE %%%
+%%            %%
+%              %
+
+
+% Document class
+\documentclass[11pt]{beamer}
+
+\usetheme{Boadilla}
+\usecolortheme{beaver}
+\useinnertheme{rectangles}
+
+\setbeamertemplate{navigation symbols}{}
+
+% Font
+\usepackage{fontspec}
+\setmainfont[%
+	SmallCapsFont={* Caps},%	enable small capital font family
+	SlantedFont={* Slanted},%	enable slanted font family
+]{Latin Modern Roman}
+
+% Language and typography
+\usepackage{polyglossia}
+\setdefaultlanguage{french}
+
+\usepackage[autostyle=true]{csquotes}
+
+\usepackage{fmtcount}
+
+\usepackage{microtype}
+
+% Defining 'theorem' environments
+%\setbeamertemplate{theorems}[numbered]
+\setbeamertemplate{theorem begin}
+{%
+	\normalfont
+	\begin{\inserttheoremblockenv}
+		{%
+			\inserttheoremname
+			\inserttheoremnumber
+			\ifx\inserttheoremaddition\@empty\else\ : \inserttheoremaddition\fi%
+		}%
+}%
+\setbeamertemplate{theorem end}{\end{\inserttheoremblockenv}}
+
+% References
+\usepackage{cleveref}
+
+\newtheorem{variant}{Variante}
+
+
+
+%              %
+%%            %%
+%%% DOCUMENT %%%
+%%            %%
+%              %
+
+% Information
+\newcommand{\thegame}{Bunny Kingdom}
+
+\title[\thegame{} : fiches]{\thegame{}: fiches \enquote{flash cards}}
+\author[A. Quenon]{Alexandre Quenon}
+\date{\today}
+
+% Text
+\begin{document}
+% *** Title page *** %
+\frame{\titlepage}
+
+
+% *** Overview *** %
+\begin{frame}
+	\tableofcontents
+\end{frame}
+
+
+
+% *** Présentation *** %
+\section{Présentation}
+
+
+\subsection{Le jeu de base}
+
+	\begin{frame}
+		\frametitle{\thegame{}: en bref}
+		
+		\structure{Thèmes généraux}:
+%		\begin{itemize}
+%			\item \textbf{gangsters},
+%			\item \textbf{jeu d'ambiance}.
+%		\end{itemize}
+	
+		\vspace*{1ex}
+		
+		\structure{Mécanismes}:
+		\begin{itemize}
+			\item draft (sélection de cartes),
+			\item placement,
+%			\item \textbf{gestion de ressources (cartes \emph{Balle} et \emph{Butin})}.
+		\end{itemize}
+	\end{frame}
+
+
+\subsection{Les extensions}
+
+	\begin{frame}
+		\frametitle{Les extensions: en bref}
+		
+		\texttt{Pas encore d'information.}
+	\end{frame}
+
+
+
+% *** Rules *** %
+\section{Règles}
+
+
+\subsection{Règles de base}
+
+	\begin{frame}
+		\frametitle{Début de partie}
+		
+		\structure{Mise en place}:
+		\begin{enumerate}
+			\item déployer le plateau;
+			\item placer une \emph{Cité 1} sur chaque case Cité du plateau (18 au total);
+			\item chaque joueur
+				\begin{itemize}
+					\item choisit 1 couleur,
+					\item prend ses 36 Lapins,
+					\item place 1 Lapin sur la case 0 de la piste de Scores,
+				\end{itemize}
+			\item placer les Cités restantes et les jetons à portée;
+			\item mélanger les cartes \emph{Exploration} et constituer une pioche face cachée.
+		\end{enumerate}
+	
+%		\vspace*{1ex}
+%	
+%		\structure{Astuces}:
+%		\begin{itemize}
+%			\item empiler les 8 piles de 8 cartes \emph{Butin} orthogonalement;
+%			\item proposition de premier joueur par les règles $\rightarrow$ joueur le plus âgé.
+%		\end{itemize}
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{Tour de jeu}
+		
+		\structure{Déroulement d'une Manche}:
+		\begin{enumerate}
+			\item distribuer les cartes (12 à 3 joueurs, 10 à 4 joueurs);
+			\item Phase d'Exploration
+				\begin{enumerate}
+					\item les joueurs choisissent simultanément deux cartes de leur paquet et les placent devant eux faces cachées,
+					\item passer les paquets aux joueurs de gauche (Manches 1 et 3) ou de droite (Manches 2 et 4),
+					\item révéler les cartes choisies à l'exception des cartes \emph{Parchemin} qui doivent rester face cachée,
+					\item résoudre les cartes puis recommencer jusqu'à épuisement des paquets,
+				\end{enumerate}
+			\item Phase de Construction, durant laquelle les joueurs peuvent utiliser leurs cartes de construction en respectant les \emph{Contraintes de Construction} et l'ordre de priorité des campements;
+			\item Phase de Collecte.
+		\end{enumerate}
+	\end{frame}
+
+%	\begin{frame}
+%		\frametitle{Tour de jeu}
+%		
+%		\structure{Actions des joueurs}:
+%		\begin{itemize}
+%			\item un joueur qui se couche
+%				\begin{itemize}
+%					\item défausse sa carte \emph{Balle} face cachée,
+%					\item ne participe pas au partage du butin,
+%					\item ne peut pas se faire tirer dessus,
+%				\end{itemize}
+%			\item un joueur ciblant un joueur couché défausse sa carte \emph{Balle} face cachée;
+%			\item un joueur ciblé par 1 ou $n$ \emph{Bang !} subit 1 ou $n$ Blessures, prend autant de jetons \emph{Blessure} et doit coucher son Personnage;
+%			\item un joueur totalisant 3 jetons \emph{Blessure} ou plus est éliminé de la partie.
+%		\end{itemize}
+%	
+%		\structure{Remarques}:
+%		\begin{itemize}
+%			\item le Parrain actuel applique les différentes phases du tour (aide-mémoire au dos de la carte \emph{bureau du Parrain});
+%			\item si un joueur a été trop lent durant la phase de braquage, on considère qu'il ne braque personne durant le tour.
+%		\end{itemize}
+%	\end{frame}
+
+	\begin{frame}
+		\frametitle{Fin de partie}
+		
+		\structure{Conditions}:
+%		\begin{itemize}
+%			\item il ne reste qu'un seul joueur en vie;
+%			\item le \ordinalnum{8} tour de jeu se termine.
+%		\end{itemize}
+%		
+%		Rappel: un joueur totalisant 3 jetons \emph{Blessure} ou plus est immédiatement éliminé.
+%		
+%		\vspace*{1ex}
+%		
+%		\structure{Décompte} du cash pour les joueurs encore en vie:
+%		\begin{enumerate}
+%			\item chaque joueur compte le nombre de cartes \emph{Diamant} qu'il possède 
+%				\begin{itemize}
+%					\item celui qui en a le plus gagne le bonus de 60000 \$,
+%					\item en cas d'égalité personne ne remporte le bonus,
+%				\end{itemize}
+%			\item chaque joueur compte la valeur de butin
+%			\begin{itemize}
+%				\item le joueur le plus riche gagne la partie,
+%				\item en cas d'égalité le joueur ayant le plus de Blessures gagne la partie,
+%				\item en cas d'égalité les joueurs partagent la victoire.
+%			\end{itemize}
+%		\end{enumerate}
+	\end{frame}
+
+
+\subsection{Variantes}
+
+%	\begin{frame}
+%		\frametitle{Variantes pour pimenter le jeu}
+%		
+%		\begin{variant}[Utiliser les cartes \emph{Pouvoir} \label{var--power}]
+%			En début de partie, distribuer une carte \emph{Pouvoir} à chaque joueur.
+%			Les Pouvoirs sont permanents.
+%		\end{variant}
+%	
+%		Remarque: je n'ai pas encore testé la \cref{var--power}.
+%		
+%		Risque potentiel: déséquilibre dans le jeu.
+%	\end{frame}
+
+%
+\end{document}

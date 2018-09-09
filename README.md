@@ -26,7 +26,7 @@ List of board games / Liste de jeux
 
 |	Name / Nom		|	Type [FR]					|	Thème [FR]	|	Flash cards ?	|
 |	:---------		|	:--------					|	:---------	|	:-----------:	|
-|	Bunny Kingdom	|
+|	Bunny Kingdom	|	Stratégie, gestion			|	Lapins		|		...			|
 |	Carcassonne		|	Stratégie, placement tuiles	|	Moyen-Âge	|		...			|
 |	Cash'n Guns		|	Ambiance, bluff				|	Gangsters	|		V			|
 |	Nosferatu		|	Ambiance, rôle caché		|	Vampires	|		...			|
