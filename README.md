@@ -24,9 +24,14 @@ List of board games / Liste de jeux
 -----------------------------------
 
 
-|	Name / Nom	|	Type [FR]					|	Thème [FR]	|
-|	:---------	|	:--------					|	:---------	|
-|	Carcassonne	|	Stratégie, placement tuiles	|	Moyen-Âge	|
-|	Cash'n Guns	|	Ambiance, bluff				|	Gangsters	|
-|	Nosferatu	|	Ambiance, rôle caché		|	Vampires	|
-|	Rising 5	|	Scénario, coopération		|	Fantasy		|
+|	Name / Nom	|	Type [FR]					|	Thème [FR]	|	Flash cards ?	|
+|	:---------	|	:--------					|	:---------	|	:-----------:	|
+|	Carcassonne	|	Stratégie, placement tuiles	|	Moyen-Âge	|		...			|
+|	Cash'n Guns	|	Ambiance, bluff				|	Gangsters	|		V			|
+|	Nosferatu	|	Ambiance, rôle caché		|	Vampires	|		...			|
+|	Rising 5	|	Scénario, coopération		|	Fantasy		|		X			|
+
+Flash cards
+* V = completed / terminé
+* ... = ongoing / en cours
+* X = none / aucune
