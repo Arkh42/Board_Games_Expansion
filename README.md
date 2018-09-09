@@ -24,12 +24,13 @@ List of board games / Liste de jeux
 -----------------------------------
 
 
-|	Name / Nom	|	Type [FR]					|	Thème [FR]	|	Flash cards ?	|
-|	:---------	|	:--------					|	:---------	|	:-----------:	|
-|	Carcassonne	|	Stratégie, placement tuiles	|	Moyen-Âge	|		...			|
-|	Cash'n Guns	|	Ambiance, bluff				|	Gangsters	|		V			|
-|	Nosferatu	|	Ambiance, rôle caché		|	Vampires	|		...			|
-|	Rising 5	|	Scénario, coopération		|	Fantasy		|		X			|
+|	Name / Nom		|	Type [FR]					|	Thème [FR]	|	Flash cards ?	|
+|	:---------		|	:--------					|	:---------	|	:-----------:	|
+|	Bunny Kingdom	|
+|	Carcassonne		|	Stratégie, placement tuiles	|	Moyen-Âge	|		...			|
+|	Cash'n Guns		|	Ambiance, bluff				|	Gangsters	|		V			|
+|	Nosferatu		|	Ambiance, rôle caché		|	Vampires	|		...			|
+|	Rising 5		|	Scénario, coopération		|	Fantasy		|		X			|
 
 Flash cards
 * V = completed / terminé
