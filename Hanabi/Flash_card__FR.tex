@@ -1,0 +1,214 @@
+%              %
+%%            %%
+%%% PREAMBLE %%%
+%%            %%
+%              %
+
+
+% Document class
+\documentclass[11pt]{beamer}
+
+\usetheme{Boadilla}
+\usecolortheme{beaver}
+\useinnertheme{rectangles}
+
+\setbeamertemplate{navigation symbols}{}
+
+% Font
+\usepackage{fontspec}
+\setmainfont[%
+	SmallCapsFont={* Caps},%	enable small capital font family
+	SlantedFont={* Slanted},%	enable slanted font family
+]{Latin Modern Roman}
+
+% Language and typography
+\usepackage{polyglossia}
+\setdefaultlanguage{french}
+
+\usepackage[autostyle=true]{csquotes}
+
+\usepackage{fmtcount}
+
+\usepackage{microtype}
+
+
+% References
+\usepackage{cleveref}
+
+
+
+%              %
+%%            %%
+%%% DOCUMENT %%%
+%%            %%
+%              %
+
+% Information
+\newcommand*{\thegame}{Hanabi}
+
+\title[\thegame{} : fiches]{\thegame{}: fiches \enquote{flash cards}}
+\author[A. Quenon]{Alexandre Quenon}
+\date{\today}
+
+% Text
+\begin{document}
+% *** Title page *** %
+\frame{\titlepage}
+
+
+% *** Overview *** %
+\begin{frame}
+	\tableofcontents
+\end{frame}
+
+
+
+% *** Présentation *** %
+\section{Présentation}
+
+
+\subsection{Le jeu de base}
+
+	\begin{frame}
+		\frametitle{\thegame{}: en bref}
+		
+		\structure{Contexte}
+		
+		Ensemble contre le jeu, les joueurs collaborent afin de tirer le plus beau feu d'artifice.
+		
+		
+		\vspace*{2ex}
+		
+		
+		\structure{Mécanismes et objectif}
+		
+		Chaque joueur possède des cartes qu'il ne connaît pas et les tient faces visibles vers les autres joueurs.
+		Le but est de constituer 5 séries de couleurs différentes en posant les cartes dans l'ordre croissant, sans doublon.
+	\end{frame}
+
+
+%\subsection{Les extensions}
+%
+%	\begin{frame}
+%		\frametitle{More Cash'n More Guns: en bref}
+%		
+%		\texttt{Pas encore d'information.}
+%	\end{frame}
+%
+%
+%
+% *** Rules *** %
+\section{Règles}
+
+
+\subsection{Règles de base}
+
+	\begin{frame}
+		\frametitle{Début de partie}
+		
+		\structure{Mise en place}
+		
+		\begin{enumerate}
+			\item prendre les 8 jetons bleus \enquote{Indice} et les 3 jetons rouges \enquote{Erreur} et les placer à portée (pot commun);
+			\item distribuer à chaque joueur
+				\begin{itemize}
+					\item 5 cartes, pour 2 ou 3 joueurs;
+					\item 4 cartes, pour 4 ou 5 joueurs;
+				\end{itemize}
+			\item \alert{aucun joueur ne peut regarder ses cartes};
+			\item chaque joueur positionne ses cartes pour qu'elles soient visibles à tous les autres joueurs à l'exception de lui-même;
+			\item le reste des cartes constitue la pioche.
+		\end{enumerate}
+	
+		\vspace*{1ex}
+	
+		\structure{Commencement}
+		
+		Le joueur avec les vêtements les plus colorés débute.
+		Puis, on joue tour à tour, dans le sens des aiguilles d'une montre.
+	\end{frame}
+
+
+	\begin{frame}
+		\frametitle{Fin de partie}
+		
+		\structure{Conditions}
+		
+		La partie s'achève si l'une des conditions suivantes est remplies:
+		\begin{itemize}
+			\item les 3 jetons rouges \enquote{Erreur} ont été utilisés;
+			\item les 5 couleurs de feux d'artifice sont complétées;
+			\item la dernière carte est piochée.
+		\end{itemize}
+	
+		Dans le dernier cas, chaque joueur joue une dernière fois, puis la partie se termine.
+
+		
+		\vspace*{2ex}
+		
+		
+		\structure{Score}
+		
+		Somme de la carte de plus haute valeur de chacune des couleurs posées.
+		
+		Chaque couleur compte trois \enquote{1}, deux \enquote{2}, \enquote{3} et \enquote{4}, et un seul \enquote{5}.
+	\end{frame}
+
+	
+	\begin{frame}
+		\frametitle{Tour de jeu}
+		
+		\structure{Actions des joueurs}
+		
+		Durant son tour, un joueur peut effectuer une des trois actions suivantes:
+		\begin{enumerate}
+			\item donner un indice à un autre joueur de son choix en utilisant un jeton bleu;
+			\item défausser une de ses cartes pour récupérer un jeton bleu;
+			\item jouer une de ses cartes pour débuter ou compléter une série.
+		\end{enumerate}
+	
+		\vspace*{1ex}
+	
+		L'indice consiste en un nombre de cartes que possède le coéquipier, soit d'une couleur précise (deux \enquote{rouge}, zéro \enquote{blanc}), soit d'un chiffre précis (trois \enquote{1}).
+		Celui qui donne l'indice pointe les cartes concernées avec le doigt.
+		
+		
+		\vspace*{1ex}
+		
+		
+		Si une carte est jouée mais qu'elle ne peut débuter ou compléter une série, elle est défaussée et un jeton rouge est utilisé.
+		Si la carte est un \enquote{5} qui termine une couleur, un jeton bleu est récupéré (bonus).
+	\end{frame}
+
+
+
+\subsection{Variantes}
+
+	\begin{frame}
+		\frametitle{Variantes pour pimenter le jeu}
+		
+		
+		\structure{Chorégraphie minutée}
+		
+		Lorsqu'un joueur pose une carte, il \alert{peut annoncer la couleur} qu'il va compléter.
+		En cas de succès, un jeton bleu est récupéré.
+		En cas d'échec, la carte est défaussée et un jeton rouge est utilisé, comme si une erreur avait été commise.
+		Le joueur n'est pas obligé d'annoncer la couleur.
+		
+		
+		\vspace*{2ex}
+		
+		
+		\structure{Avalanche de couleurs}
+		
+		On ajoute les \alert{cartes multicolores} (un seul exemplaire de chaque chiffre), qui compte comme une couleur à part entière.
+		Les joueurs doivent donc réaliser six séries de feux d'artifice.
+		Deux versions possibles pour les indices:
+		\begin{enumerate}
+			\item les joueurs peuvent annoncer $x$  \enquote{multicolore} dans la main du coéquipier;
+			\item les joueurs n'ont pas le droit d'annoncer \enquote{multicolore}, ces dernières étant considérées simultanément comme \enquote{rouge}, \enquote{jaune}, \enquote{blanc}, \enquote{vert} et \enquote{bleu}.
+		\end{enumerate}
+	\end{frame}
+
+%
+\end{document}
