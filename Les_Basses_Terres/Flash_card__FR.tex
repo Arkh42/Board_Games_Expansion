@@ -1,0 +1,289 @@
+%              %
+%%            %%
+%%% PREAMBLE %%%
+%%            %%
+%              %
+
+
+% Document class
+\documentclass[11pt]{beamer}
+
+\usetheme{Boadilla}
+\usecolortheme{beaver}
+\useinnertheme{rectangles}
+
+\setbeamertemplate{navigation symbols}{}
+
+% Font
+\usepackage{fontspec}
+\setmainfont[%
+	SmallCapsFont={* Caps},%	enable small capital font family
+	SlantedFont={* Slanted},%	enable slanted font family
+]{Latin Modern Roman}
+
+% Language and typography
+\usepackage{polyglossia}
+\setdefaultlanguage{french}
+
+\usepackage[autostyle=true]{csquotes}
+
+\usepackage{fmtcount}
+
+\usepackage{microtype}
+
+% Defining 'theorem' environments
+%\setbeamertemplate{theorems}[numbered]
+\setbeamertemplate{theorem begin}
+{%
+	\normalfont
+	\begin{\inserttheoremblockenv}
+		{%
+			\inserttheoremname
+			\inserttheoremnumber
+			\ifx\inserttheoremaddition\@empty\else\ : \inserttheoremaddition\fi%
+		}%
+}%
+\setbeamertemplate{theorem end}{\end{\inserttheoremblockenv}}
+
+% References
+\usepackage{cleveref}
+
+\newtheorem{variant}{Variante}
+
+
+
+%              %
+%%            %%
+%%% DOCUMENT %%%
+%%            %%
+%              %
+
+% Information
+\newcommand{\thegame}{Les Basses Terres}
+
+\title[\thegame{} : fiches]{\thegame{}: fiches \enquote{flash cards}}
+\author[A. Quenon]{Alexandre Quenon}
+\date{\today}
+
+% Text
+\begin{document}
+% *** Title page *** %
+\frame{\titlepage}
+
+
+% *** Overview *** %
+\begin{frame}
+	\tableofcontents
+\end{frame}
+
+
+
+% *** Présentation *** %
+\section{Présentation}
+
+
+\subsection{Le jeu de base}
+
+	\begin{frame}
+		\frametitle{\thegame{}: en bref}
+		
+		\structure{Thèmes généraux}:
+		\begin{itemize}
+			\item jeu de gestion.
+		\end{itemize}
+	
+		\vspace*{1ex}
+		
+		\structure{Mécanismes}:
+		\begin{itemize}
+			\item gestion de ressources.
+		\end{itemize}
+	\end{frame}
+
+
+%\subsection{Les extensions}
+%
+%	\begin{frame}
+%		\frametitle{More Cash'n More Guns: en bref}
+%		
+%		\texttt{Pas encore d'information.}
+%	\end{frame}
+
+
+
+% *** Rules *** %
+\section{Règles}
+
+
+%\subsection{Règles de base}
+%
+%	\begin{frame}
+%		\frametitle{Début de partie}
+%		
+%		\structure{Mise en place}:
+%		\begin{enumerate}
+%			\item chaque joueur prend
+%				\begin{itemize}
+%					\item 1 pistolet,
+%					\item 5 cartes \emph{Clic},
+%					\item 3 cartes \emph{Bang !},
+%				\end{itemize}
+%			\item mélanger les cartes \emph{Butin} et les séparer en 8 piles de 8 cartes;
+%			\item placer la tuile \emph{Nouveau Parrain} au centre de la table;
+%			\item placer les jetons \emph{Blessure} à portée;
+%			\item désigner le premier joueur et lui donner le \emph{bureau du Parrain}.
+%		\end{enumerate}
+%	
+%		\vspace*{1ex}
+%	
+%		\structure{Astuces}:
+%		\begin{itemize}
+%			\item empiler les 8 piles de 8 cartes \emph{Butin} orthogonalement;
+%			\item proposition de premier joueur par les règles $\rightarrow$ joueur le plus âgé.
+%		\end{itemize}
+%	\end{frame}
+%
+
+	\begin{frame}
+		\frametitle{Phases de jeu}
+		
+		Une partie se découpe en \structure{3 périodes}, comportant:
+		\begin{enumerate}
+			\item Changement de Marée,
+			\item Phase de Travail,
+			\item Phase d'Entretien,
+			\item Phase de Travail,
+			\item Phase d'Entretien,
+			\item Marée Haute.
+		\end{enumerate}
+	
+		À la fin des 3 périodes, \structure{une phase finale}: l'Onde de Tempête.
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{Tour de jeu: Phase Changement de Marée}
+		
+		Dans l'ordre:
+		\begin{enumerate}
+			\item chaque joueur garde au maximum 8 cartes Ressources en main et défausse le surplus, au choix;
+			\item placer les 3 premières cartes Inondation de la pioche sur la zone Mer, faces cachées;
+			\item révéler la première carte Inondation et placer le nombre de jetons Inondation indiqués dans la zone Inondation (empiler lorsqu'un niveau est complet).
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{Tour de jeu: Phase de Travail (1)}
+		
+		Chaque joueur possède 3 Fermiers, disposant de 2, 3 ou 4 Points d'Action, respectivement.
+		
+		En commençant par le premier joueur et dans le sens horaire, chaque joueur pose un Fermier sur une case Action de son plateau Corps de Ferme et effectue immédiatement l'action correspondante, en considérant:
+		\begin{itemize}
+			\item si une case Action est déjà occupée par $n$ Fermiers, le joueur doit payer $n$ pièces pour pouvoir poser un nouveau Fermier sur cette même case;
+			\item pour chaque action, le joueur peut remplacer 1 ressource par 2 ressources d'un autre type (les Bâtiments Briqueterie/Charpenterie/Maçonnerie de Maître ne fonctionnent pas).
+		\end{itemize}
+		
+		Après avoir effectué l'action, pour chaque point d'action non utilisé, le joueur pioche 1 carte Ressource.
+		Il est interdit de ne pas effectuer l'action pour piocher.
+	\end{frame}
+	\begin{frame}
+		\frametitle{Tour de jeu: Phase de Travail (2)}
+		
+		Il existe \alert{5 actions possibles}:
+		\begin{enumerate}
+			\item Construire une Extension de Ferme,
+			\item Contribuer à la Digue,
+			\item Construire et/ou Déplacer des Pions Bordure,
+			\item Acheter ou Vendre des Moutons,
+			\item Piocher des Cartes Ressources --- (1) face visible, et/ou (2) face cachée.
+		\end{enumerate}
+		
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{Tour de jeu: Phase d'Entretien}
+		
+		Dans l'ordre:
+		\begin{enumerate}
+			\item 
+		\end{enumerate}
+	\end{frame}
+	\begin{frame}
+		\frametitle{Tour de jeu: Phase Marée Haute}
+		
+		Dans l'ordre:
+		\begin{enumerate}
+			\item 
+		\end{enumerate}
+	\end{frame}
+
+
+%	\begin{frame}
+%		\frametitle{Tour de jeu}
+%		
+%		\structure{Actions des joueurs}:
+%		\begin{itemize}
+%			\item un joueur qui se couche
+%				\begin{itemize}
+%					\item défausse sa carte \emph{Balle} face cachée,
+%					\item ne participe pas au partage du butin,
+%					\item ne peut pas se faire tirer dessus,
+%				\end{itemize}
+%			\item un joueur ciblant un joueur couché défausse sa carte \emph{Balle} face cachée;
+%			\item un joueur ciblé par 1 ou $n$ \emph{Bang !} subit 1 ou $n$ Blessures, prend autant de jetons \emph{Blessure} et doit coucher son Personnage;
+%			\item un joueur totalisant 3 jetons \emph{Blessure} ou plus est éliminé de la partie.
+%		\end{itemize}
+%	
+%		\structure{Remarques}:
+%		\begin{itemize}
+%			\item le Parrain actuel applique les différentes phases du tour (aide-mémoire au dos de la carte \emph{bureau du Parrain});
+%			\item si un joueur a été trop lent durant la phase de braquage, on considère qu'il ne braque personne durant le tour.
+%		\end{itemize}
+%	\end{frame}
+%
+%	\begin{frame}
+%		\frametitle{Fin de partie}
+%		
+%		\structure{Conditions}:
+%		\begin{itemize}
+%			\item il ne reste qu'un seul joueur en vie;
+%			\item le \ordinalnum{8} tour de jeu se termine.
+%		\end{itemize}
+%		
+%		Rappel: un joueur totalisant 3 jetons \emph{Blessure} ou plus est immédiatement éliminé.
+%		
+%		\vspace*{1ex}
+%		
+%		\structure{Décompte} du cash pour les joueurs encore en vie:
+%		\begin{enumerate}
+%			\item chaque joueur compte le nombre de cartes \emph{Diamant} qu'il possède 
+%				\begin{itemize}
+%					\item celui qui en a le plus gagne le bonus de 60000 \$,
+%					\item en cas d'égalité personne ne remporte le bonus,
+%				\end{itemize}
+%			\item chaque joueur compte la valeur de butin
+%			\begin{itemize}
+%				\item le joueur le plus riche gagne la partie,
+%				\item en cas d'égalité le joueur ayant le plus de Blessures gagne la partie,
+%				\item en cas d'égalité les joueurs partagent la victoire.
+%			\end{itemize}
+%		\end{enumerate}
+%	\end{frame}
+
+
+%\subsection{Variantes}
+%
+%	\begin{frame}
+%		\frametitle{Variantes pour pimenter le jeu}
+%		
+%		\begin{variant}[Utiliser les cartes \emph{Pouvoir} \label{var--power}]
+%			En début de partie, distribuer une carte \emph{Pouvoir} à chaque joueur.
+%			Les Pouvoirs sont permanents.
+%		\end{variant}
+%	
+%		Remarque: je n'ai pas encore testé la \cref{var--power}.
+%		
+%		Risque potentiel: déséquilibre dans le jeu.
+%	\end{frame}
+
+%
+\end{document}
